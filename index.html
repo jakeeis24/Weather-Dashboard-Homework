@@ -39,13 +39,14 @@
             <input
               type="text"
               class="form-control"
+              id="userCity"
               placeholder="Denver, Chicago..."
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
           </div>
           <div>
-            <button type="button" class="btn btn-primary btn-lg">Search</button>
+            <button type="button" class="btn btn-primary btn-lg " id="search-btn">Search</button>
           </div>
           <hr />
           <div>
@@ -61,8 +62,12 @@
         <!-- current city and 5day forecast -->
         <div class="col-9">
           <!-- current city box -->
-          <div class="current-city">
-            <h3>Current City: <i class="current-icon"></i></h3>
+          <div class="current-city" >
+            <h3 id="displayed-city"> <i class="current-icon"></i></h3>
+            <p id="current-temp">65</p>
+            <p id="windspeed">5</p>
+            <p id="humidity">45</p>
+            <p id="uv-index">3</p>
           </div>
 
           <div class="forecast">
