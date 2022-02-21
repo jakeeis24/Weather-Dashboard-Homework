@@ -26,8 +26,22 @@ function getApi() {
       currentTemp.textContent = "Temp: " + data.main.temp + "°F";
       currentWindpeed.textContent = "Wind: " + data.wind.speed + " MPH";
       currentHumidity.textContent = "Humidity: " + data.main.humidity + " %";
-      currentUvIndex.textContent = "UV Index: " + data;
-      //NEED TO FIGURE OUT UV --- ONE CALL API
+
+      //Additional fetch to add the UV Index
+      fetch(
+        "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+          data.coord.lat +
+          "&lon=" +
+          data.coord.lon +
+          "&exclude=hourly,daily&appid=863b999d24ecbe4ecc592ba3795125dd"
+      )
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          currentUvIndex.textContent = "UV Index: " + data.current.uvi;
+        });
     });
 }
 searchBtn.addEventListener("click", getApi);
