@@ -109,3 +109,15 @@ function getApi() {
     });
 }
 searchBtn.addEventListener("click", getApi);
+searchBtn.addEventListener("click", function () {
+  var cityList = document.getElementById("recent-searches");
+  var recentSearch = document.getElementById("history-search"); //IN PROGRESS
+  var addCity = document.createElement("button");
+  addCity.setAttribute("type", "button");
+  addCity.setAttribute("class", "city-list");
+  addCity.setAttribute("id", "history-search");
+
+  addCity.textContent = $("#userCity").val();
+  cityList.appendChild(addCity);
+  recentSearch.addEventListener("click", getApi); //IN PROGRESS
+});
