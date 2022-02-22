@@ -108,6 +108,7 @@ function getApi() {
         });
     });
 }
+
 searchBtn.addEventListener("click", getApi);
 searchBtn.addEventListener("click", function () {
   var cityList = document.getElementById("recent-searches");
@@ -119,17 +120,13 @@ searchBtn.addEventListener("click", function () {
   addCity.textContent = $("#userCity").val();
   cityList.appendChild(addCity);
 
-  //IN PROGRESS
-  //   addCity.addEventListener("click", function () {
-  //     //NEEDS WORK
-  //     console.log("working!!!!!!!");
-  //     addCity.textContent = $("#userCity").val();
-  //     // userCity.textContent.replace(addCity.textContent);
-  //     console.log(userCity);
-  //     console.log(addCity);
-  //     getApi();
-  //   });
+  addCity.addEventListener("click", function () {
+    //console.log("working!!!!!!!");
+    //console.log(addCity.textContent);
+    document.getElementById("userCity").value = addCity.textContent;
 
-  //     getApi();
-  //   });
+    //console.log(userCity);
+    //console.log(addCity);
+    getApi();
+  });
 });
