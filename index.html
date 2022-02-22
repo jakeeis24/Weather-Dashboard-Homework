@@ -40,7 +40,7 @@
               type="text"
               class="form-control"
               id="userCity"
-              placeholder="Denver, Chicago..."
+              placeholder=""
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
@@ -63,60 +63,60 @@
         <div class="col-9">
           <!-- current city box -->
           <div class="current-city" >
-            <h3 id="displayed-city"> <i class="current-icon"></i></h3>
-            <p id="current-temp">65</p>
-            <p id="windspeed">5</p>
-            <p id="humidity">45</p>
-            <p id="uv-index">3</p>
+            <h3 id="displayed-city">City:<i class="current-icon"></i></h3>
+            <p id="current-temp">Temp:</p>
+            <p id="windspeed">Wind:</p>
+            <p id="humidity">Humidity:</p>
+            <p id="uv-index">UV Index:</p>
           </div>
 
           <div class="forecast">
             <h3>5-Day Forecast:</h3>
           <div class="card-group ">
             <div class="card mx-1" style="width: 12rem">
-              <ul class="list-group list-group-flush">
+              <ul class="list-group list-group-flush" id="day0">
                   
-                <li class="list-group-item">date</li>
-                <li class="list-group-item">icon</li>
-                <li class="list-group-item">Temp:</li>
-                <li class="list-group-item">Wind:</li>
-                <li class="list-group-item">Humidity:</li>
+                <li class="list-group-item" id="forecast0">Date:</li> 
+                <li class="list-group-item" id ="icon0">Icon</li>
+                <li class="list-group-item" id="temp0">Temp:</li>
+                <li class="list-group-item" id="wind0">Wind:</li>
+                <li class="list-group-item" id="humid0">Humidity:</li>
               </ul>
             </div>
             <div class="card mx-1" style="width: 12rem">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">date</li>
-                <li class="list-group-item">icon</li>
-                <li class="list-group-item">Temp:</li>
-                <li class="list-group-item">Wind:</li>
-                <li class="list-group-item">Humidity:</li>
+              <ul class="list-group list-group-flush" id="day1">
+                <li class="list-group-item" id="forecast1">Date:</li>
+                <li class="list-group-item" id ="icon1">Icon</li>
+                <li class="list-group-item"id ="temp1">Temp:</li>
+                <li class="list-group-item" id="wind1">Wind:</li>
+                <li class="list-group-item" id="humid1">Humidity:</li>
               </ul>
             </div>
             <div class="card mx-1" style="width: 12rem">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">date</li>
-                <li class="list-group-item">icon</li>
-                <li class="list-group-item">Temp:</li>
-                <li class="list-group-item">Wind:</li>
-                <li class="list-group-item">Humidity:</li>
+              <ul class="list-group list-group-flush" id="day2">
+                <li class="list-group-item" id="forecast2">Date:</li>
+                <li class="list-group-item" id ="icon2">Icon</li>
+                <li class="list-group-item"id ="temp2">Temp:</li>
+                <li class="list-group-item" id="wind2">Wind:</li>
+                <li class="list-group-item" id="humid2">Humidity:</li>
               </ul>
             </div>
             <div class="card mx-1" style="width: 12rem">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">date</li>
-                <li class="list-group-item">icon</li>
-                <li class="list-group-item">Temp:</li>
-                <li class="list-group-item">Wind:</li>
-                <li class="list-group-item">Humidity:</li>
+              <ul class="list-group list-group-flush" id="day3">
+                <li class="list-group-item" id="forecast3">Date:</li>
+                <li class="list-group-item" id ="icon3">Icon</li>
+                <li class="list-group-item"id ="temp3">Temp:</li>
+                <li class="list-group-item" id="wind3">Wind:</li>
+                <li class="list-group-item" id="humid3">Humidity:</li>
               </ul>
             </div>
             <div class="card mx-1" style="width: 12rem">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">date</li>
-                <li class="list-group-item">icon</li>
-                <li class="list-group-item">Temp:</li>
-                <li class="list-group-item">Wind:</li>
-                <li class="list-group-item">Humidity:</li>
+              <ul class="list-group list-group-flush" id="day4">
+                <li class="list-group-item" id="forecast4">Date:</li>
+                <li class="list-group-item" id ="icon4">Icon</li>
+                <li class="list-group-item" id="temp4">Temp:</li>
+                <li class="list-group-item" id="wind4">Wind:</li>
+                <li class="list-group-item" id="humid4">Humidity:</li>
               </ul>
             </div>
           </div>

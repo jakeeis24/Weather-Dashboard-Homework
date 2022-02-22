@@ -5,3 +5,6 @@
   background: navy;
   color: white;
 }
+.current-city {
+  border: 3px solid black;
+}
