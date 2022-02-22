@@ -8,3 +8,11 @@
 .current-city {
   border: 3px solid black;
 }
+ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0rem;
+}
+.city-list {
+  margin: 0.3rem 0;
+}
