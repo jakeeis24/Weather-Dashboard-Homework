@@ -86,6 +86,13 @@ function getApi() {
         .then(function (data) {
           console.log(data);
           currentUvIndex.textContent = "UV Index: " + data.current.uvi;
+          if (data.current.uvi <= 3) {
+            currentUvIndex.style.backgroundColor = "green";
+          } else if (3 < data.current.uvi <= 6) {
+            currentUvIndex.style.backgroundColor = "orange";
+          } else {
+            currentUvIndex.style.backgroundColor = "red";
+          }
           //filling the forecasts
           //temps
           temp0.textContent = "Temp: " + data.daily[1].temp.day + "°F";
@@ -105,6 +112,14 @@ function getApi() {
           humid2.textContent = "Humidity: " + data.daily[3].humidity + "%";
           humid3.textContent = "Humidity: " + data.daily[4].humidity + "%";
           humid4.textContent = "Humidity: " + data.daily[5].humidity + "%";
+          icon0.textContent =
+            "http://openweathermap.org/img/wn/" +
+            data.daily[1].weather[0].icon +
+            ".png";
+          icon1.textContent = data.daily[2].weather[0].icon;
+          icon2.textContent = data.daily[3].weather[0].icon;
+          icon3.textContent = data.daily[4].weather[0].icon;
+          icon4.textContent = data.daily[5].weather[0].icon;
         });
     });
 }
